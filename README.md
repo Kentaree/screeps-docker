@@ -2,6 +2,10 @@
 Setup a standalone screeps server with mongo + redis
 
 # Instructions
-Insert your [Steam API Key](https://steamcommunity.com/dev/apikey) into the file ".env".
+Create a ".env" file with your [Steam API Key](https://steamcommunity.com/dev/apikey) defined like this:
 
-Start the server with "sudo docker-compose up" 
+    STEAMKEY="XXX"
+
+Start the server with 
+
+    sudo docker-compose up 
