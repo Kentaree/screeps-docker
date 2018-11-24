@@ -12,6 +12,7 @@ if [ ! -e /screeps/.screepsrc ]; then
         echo "${STEAMKEY}" | screeps init
 
         echo "initializing mods..."
+	# should move back into the Dockerfile
         yarn add screepsmod-mongo screepsmod-auth screepsmod-tickrate screepsmod-admin-utils screepsmod-features @screeps/simplebot
 
         echo "initializing .screepsrc..."
@@ -20,7 +21,6 @@ if [ ! -e /screeps/.screepsrc ]; then
         echo "[redis]" >> .screepsrc
         echo "host=${REDIS_LINK}" >> .screepsrc
         mv custom_mods.json mods.json
-	#sed -i 's/modfile.*/modfile = custom_mods.json/' .screepsrc
     fi
 fi
 
